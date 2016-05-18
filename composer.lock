@@ -1,0 +1,224 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "78dd800e6f4acc3340cd7aae909fc7d4",
+    "content-hash": "8c2a00bd75be728b5d3c2b56da9faf19",
+    "packages": [
+        {
+            "name": "matthiasmullie/minify",
+            "version": "1.3.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/minify.git",
+                "reference": "272e46113404f66ced256659552a0cc074a7810f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/272e46113404f66ced256659552a0cc074a7810f",
+                "reference": "272e46113404f66ced256659552a0cc074a7810f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "matthiasmullie/path-converter": "~1.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "matthiasmullie/scrapbook": "~1.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "bin": [
+                "bin/minifycss",
+                "bin/minifyjs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\Minify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "minify@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSS & JS minifier",
+            "homepage": "http://www.minifier.org",
+            "keywords": [
+                "JS",
+                "css",
+                "javascript",
+                "minifier",
+                "minify"
+            ],
+            "time": "2016-03-01 08:00:27"
+        },
+        {
+            "name": "matthiasmullie/path-converter",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/path-converter.git",
+                "reference": "7c36e5cafa95dd20008d19b153b506cffa8c2848"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/7c36e5cafa95dd20008d19b153b506cffa8c2848",
+                "reference": "7c36e5cafa95dd20008d19b153b506cffa8c2848",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\PathConverter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "pathconverter@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Relative path converter",
+            "homepage": "http://github.com/matthiasmullie/path-converter",
+            "keywords": [
+                "converter",
+                "path",
+                "paths",
+                "relative"
+            ],
+            "time": "2016-04-27 10:38:05"
+        },
+        {
+            "name": "reisraff/phulp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reisraff/phulp.git",
+                "reference": "18acc5ce0dd705c844483ec50c0068e07c4f3136"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/18acc5ce0dd705c844483ec50c0068e07c4f3136",
+                "reference": "18acc5ce0dd705c844483ec50c0068e07c4f3136",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "symfony/finder": "^3.0"
+            },
+            "bin": [
+                "bin/phulp"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phulp\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Reis",
+                    "email": "reisraff@gmail.com"
+                }
+            ],
+            "description": "The task manager for php",
+            "keywords": [
+                "php",
+                "phulp"
+            ],
+            "support": {
+                "source": "https://github.com/reisraff/phulp/tree/master",
+                "issues": "https://github.com/reisraff/phulp/issues"
+            },
+            "time": "2016-05-18 03:20:34"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "c54e407b35bc098916704e9fd090da21da4c4f52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/c54e407b35bc098916704e9fd090da21da4c4f52",
+                "reference": "c54e407b35bc098916704e9fd090da21da4c4f52",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-03-10 11:13:05"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "reisraff/phulp": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6"
+    },
+    "platform-dev": []
+}

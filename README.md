@@ -1,2 +1,2 @@
 # phulp-minifier
-The minifier addon to phulp
+The minifier addon for phulp
