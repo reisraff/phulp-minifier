@@ -21,16 +21,15 @@ class JsMinifier implements PipeInterface
     {
         $this->join = $join;
     }
+
     /**
      * @inheritdoc
      */
-    public function do(Source $src)
+    public function execute(Source $src)
     {
-        $output = null;
-
         $min = new JS();
         foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/js$/', $file->getRealPath)) {
+            if (preg_match('/js$/', $file->getName())) {
                 if (!$this->join) {
                     $min = new CSS;
                 }

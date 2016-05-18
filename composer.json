@@ -15,12 +15,6 @@
             "Minifier\\" : "src"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:reisraff/phulp.git"
-        }
-    ],
     "require": {
         "php": ">=5.6",
         "matthiasmullie/minify": "^1.3",

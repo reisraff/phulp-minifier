@@ -25,7 +25,7 @@ class CssMinifier implements PipeInterface
     /**
      * @inheritdoc
      */
-    public function do(Source $src)
+    public function execute(Source $src)
     {
         $min = new CSS;
         foreach ($src->getDistFiles() as $key => $file) {
