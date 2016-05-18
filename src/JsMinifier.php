@@ -10,22 +10,43 @@ use MatthiasMullie\Minify\JS;
 class JsMinifier implements PipeInterface
 {
     /**
+     * @var boolean $join
+     */
+    private $join;
+
+    /**
+     * @param boolean $join
+     */
+    public function __construct($join = false)
+    {
+        $this->join = $join;
+    }
+    /**
      * @inheritdoc
      */
     public function do(Source $src)
     {
         $output = null;
 
+        $min = new JS();
         foreach ($src->getDistFiles() as $key => $file) {
             if (preg_match('/js$/', $file->getRealPath)) {
-                $min = new JS();
-                $min->add($file->getContents());
-                $output .= $min->minify();
+                if (!$this->join) {
+                    $min = new CSS;
+                }
 
-                $src->removeDistFile($key);
+                $min->add($file->getContent());
+
+                if (!$this->join) {
+                    $file->setContent($min->minify());
+                } else {
+                    $src->removeDistFile($key);
+                }
             }
         }
 
-        $src->addDistFile(new DistFile(md5(uniqid(microtime())) . '.js', $output));
+        if ($this->join) {
+            $src->addDistFile(new DistFile(md5(uniqid(microtime())) . '.js', $min->minify()));
+        }
     }
 }
