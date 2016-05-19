@@ -1,7 +1,7 @@
 {
     "name": "reisraff/phulp-minifier",
     "description": "The minifier addon for phulp",
-    "keywords": ["phulp", "php", "minifier"],
+    "keywords": ["phulpplugin", "phulp", "php", "minifier"],
     "license": "MIT",
     "type": "library",
     "authors": [
