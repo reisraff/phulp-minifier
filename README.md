@@ -5,7 +5,7 @@ The minifier addon for [PHULP](https://github.com/reisraff/phulp)
 ## Install
 
 ```bash
-$ composer require reisraff/phulp-minifier:dev-master
+$ composer require reisraff/phulp-minifier:0.0.1
 ```
 
 ## Usage
