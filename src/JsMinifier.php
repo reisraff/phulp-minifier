@@ -29,7 +29,7 @@ class JsMinifier implements PipeInterface
     {
         $min = new JS();
         foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/js$/', $file->getName())) {
+            if (preg_match('/js$/', $file->getName()) || preg_match('/js$/', $file->getDistpathname())) {
                 if (!$this->join) {
                     $min = new CSS;
                 }

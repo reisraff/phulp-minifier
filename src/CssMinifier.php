@@ -29,7 +29,7 @@ class CssMinifier implements PipeInterface
     {
         $min = new CSS;
         foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/css$/', $file->getName())) {
+            if (preg_match('/css$/', $file->getName()) || preg_match('/css$/', $file->getDistpathname())) {
                 if (!$this->join) {
                     $min = new CSS;
                 }
