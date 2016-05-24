@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "94d0b15680f2005846a42259c2977b5c",
-    "content-hash": "0d0eda800597da399f3a16c4083175b8",
+    "hash": "bdb5b6fa4309af24595bffac397b335c",
+    "content-hash": "b2ba1a072619330442696a04a4cc43ee",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -114,16 +114,16 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "dev-master",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "82ff57f4df8ab698d29bb20170969fa21dac69e0"
+                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/82ff57f4df8ab698d29bb20170969fa21dac69e0",
-                "reference": "82ff57f4df8ab698d29bb20170969fa21dac69e0",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
+                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
                 "shasum": ""
             },
             "require": {
@@ -156,11 +156,12 @@
                 }
             ],
             "description": "The task manager for php",
+            "homepage": "https://reisraff.github.io/phulp/dist/#!/home",
             "keywords": [
                 "php",
                 "phulp"
             ],
-            "time": "2016-05-18 15:57:24"
+            "time": "2016-05-24 02:07:40"
         },
         {
             "name": "symfony/finder",
@@ -215,9 +216,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "reisraff/phulp": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
