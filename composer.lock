@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "78dd800e6f4acc3340cd7aae909fc7d4",
-    "content-hash": "8c2a00bd75be728b5d3c2b56da9faf19",
+    "hash": "bdb5b6fa4309af24595bffac397b335c",
+    "content-hash": "b2ba1a072619330442696a04a4cc43ee",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -114,21 +114,26 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "dev-master",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "18acc5ce0dd705c844483ec50c0068e07c4f3136"
+                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/18acc5ce0dd705c844483ec50c0068e07c4f3136",
-                "reference": "18acc5ce0dd705c844483ec50c0068e07c4f3136",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
+                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
                 "symfony/finder": "^3.0"
+            },
+            "require-dev": {
+                "phing/phing": "2.*",
+                "phpunit/phpunit": "4.5.*",
+                "squizlabs/php_codesniffer": "2.0.*@dev"
             },
             "bin": [
                 "bin/phulp"
@@ -136,9 +141,11 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Phulp\\": "src"
+                    "Phulp\\": "src",
+                    "Test\\": "test"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -149,15 +156,12 @@
                 }
             ],
             "description": "The task manager for php",
+            "homepage": "https://reisraff.github.io/phulp/dist/#!/home",
             "keywords": [
                 "php",
                 "phulp"
             ],
-            "support": {
-                "source": "https://github.com/reisraff/phulp/tree/master",
-                "issues": "https://github.com/reisraff/phulp/issues"
-            },
-            "time": "2016-05-18 03:20:34"
+            "time": "2016-05-24 02:07:40"
         },
         {
             "name": "symfony/finder",
@@ -212,9 +216,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "reisraff/phulp": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
