@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bdb5b6fa4309af24595bffac397b335c",
-    "content-hash": "b2ba1a072619330442696a04a4cc43ee",
+    "hash": "0d47732b08a83c632eb5760c1e161629",
+    "content-hash": "d01d65f1af7ae8272917eb16b50e4dd2",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -114,16 +114,16 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "0.0.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d"
+                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
-                "reference": "a3c7f2962080eb2a2f4da6d1504c07cd9c83b73d",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
+                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
                 "shasum": ""
             },
             "require": {
@@ -131,8 +131,10 @@
                 "symfony/finder": "^3.0"
             },
             "require-dev": {
+                "brain/monkey": "~1.0",
+                "mockery/mockery": "0.9.*",
                 "phing/phing": "2.*",
-                "phpunit/phpunit": "4.5.*",
+                "phpunit/phpunit": "5.3.*",
                 "squizlabs/php_codesniffer": "2.0.*@dev"
             },
             "bin": [
@@ -141,8 +143,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Phulp\\": "src",
-                    "Test\\": "test"
+                    "Phulp\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -155,26 +156,26 @@
                     "email": "reisraff@gmail.com"
                 }
             ],
-            "description": "The task manager for php",
+            "description": "The task manager for PHP",
             "homepage": "https://reisraff.github.io/phulp/dist/#!/home",
             "keywords": [
                 "php",
                 "phulp"
             ],
-            "time": "2016-05-24 02:07:40"
+            "time": "2016-06-04 16:15:05"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.0.6",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "c54e407b35bc098916704e9fd090da21da4c4f52"
+                "reference": "40d17ed287bf51a2f884c4619ce8ff2a1c5cd219"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c54e407b35bc098916704e9fd090da21da4c4f52",
-                "reference": "c54e407b35bc098916704e9fd090da21da4c4f52",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/40d17ed287bf51a2f884c4619ce8ff2a1c5cd219",
+                "reference": "40d17ed287bf51a2f884c4619ce8ff2a1c5cd219",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +184,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -210,7 +211,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-10 11:13:05"
+            "time": "2016-05-13 18:06:41"
         }
     ],
     "packages-dev": [],
