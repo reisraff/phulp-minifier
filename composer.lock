@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0d47732b08a83c632eb5760c1e161629",
-    "content-hash": "d01d65f1af7ae8272917eb16b50e4dd2",
+    "hash": "17cd4619589825f4b6422c5bbc599e01",
+    "content-hash": "f40fd49fd96a1eda26ef07a681627a88",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -114,16 +114,16 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e"
+                "reference": "67087a6c8fda3865cd44cc5194b28bfb0b673286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
-                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/67087a6c8fda3865cd44cc5194b28bfb0b673286",
+                "reference": "67087a6c8fda3865cd44cc5194b28bfb0b673286",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 "php",
                 "phulp"
             ],
-            "time": "2016-06-04 16:15:05"
+            "time": "2016-06-06 14:39:10"
         },
         {
             "name": "symfony/finder",
