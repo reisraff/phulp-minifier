@@ -5,7 +5,7 @@ The minifier addon for [PHULP](https://github.com/reisraff/phulp)
 ## Install
 
 ```bash
-$ composer require reisraff/phulp-minifier:~0.0.1
+$ composer require reisraff/phulp-minifier
 ```
 
 ## Usage
@@ -13,27 +13,18 @@ $ composer require reisraff/phulp-minifier:~0.0.1
 ```php
 <?php
 
-use Phulp\Phulp;
-use Minifier\CssMinifier;
-use Minifier\JsMinifier;
+use Phulp\Minifier\CssMinifier;
+use Phulp\Minifier\JsMinifier;
 
-class PhulpFile extends Phulp
-{
-    public function define()
-    {
-        Phulp::task('css', function () {
-            Phulp::src(['src/'], '/css$/')
-                ->pipe(new CssMinifier)
-                ->pipe(Phulp::dest('dist'));
-        });
+$phulp->task('css', function ($phulp) {
+    $phulp->src(['src/'], '/css$/')
+        ->pipe(new CssMinifier);
+});
 
-        Phulp::task('js', function () {
-            Phulp::src(['src/'], '/php$/')
-                ->pipe(new JsMinifier)
-                ->pipe(Phulp::dest('dist'));
-        });
-    }
-}
+$phulp->task('js', function ($phulp) {
+    $phulp->src(['src/'], '/js$/')
+        ->pipe(new JsMinifier);
+});
 
 ```
 
@@ -46,10 +37,10 @@ the constructor, by default the join flag is false:
 ```php
 <?php
 
-use Minifier\CssMinifier;
-use Minifier\JsMinifier;
+use Phulp\Minifier\CssMinifier;
+use Phulp\Minifier\JsMinifier;
 
-$cssMinifier = new CssMinifier(true); // the join flag is true
-$jsMinifier = new JsMinifier(true); // the join flag is true
+$cssMinifier = new CssMinifier(['join' => true]); // the join flag is true
+$jsMinifier = new JsMinifier(['join' => true]); // the join flag is true
 
 ```

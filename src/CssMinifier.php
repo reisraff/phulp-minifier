@@ -1,6 +1,6 @@
 <?php
 
-namespace Minifier;
+namespace Phulp\Minifier;
 
 use Phulp\PipeInterface;
 use Phulp\Source;
@@ -10,16 +10,18 @@ use MatthiasMullie\Minify\CSS;
 class CssMinifier implements PipeInterface
 {
     /**
-     * @var boolean $join
+     * @var array $options
      */
-    private $join;
+    private $options = [
+        'join' => false,
+    ];
 
     /**
-     * @param boolean $join
+     * @param array $options
      */
-    public function __construct($join = false)
+    public function __construct(array $options = [])
     {
-        $this->join = $join;
+        $this->options = array_merge($this->options, $options);
     }
 
     /**
@@ -30,13 +32,13 @@ class CssMinifier implements PipeInterface
         $min = new CSS;
         foreach ($src->getDistFiles() as $key => $file) {
             if (preg_match('/css$/', $file->getName()) || preg_match('/css$/', $file->getDistpathname())) {
-                if (!$this->join) {
+                if (!$this->options['join']) {
                     $min = new CSS;
                 }
 
                 $min->add($file->getContent());
 
-                if (!$this->join) {
+                if (!$this->options['join']) {
                     $file->setContent($min->minify());
                 } else {
                     $src->removeDistFile($key);
@@ -44,8 +46,8 @@ class CssMinifier implements PipeInterface
             }
         }
 
-        if ($this->join) {
-            $src->addDistFile(new DistFile(md5(uniqid(microtime())) . '.css', $min->minify()));
+        if ($this->options['join']) {
+            $src->addDistFile(new DistFile($min->minify(), md5(uniqid(microtime())) . '.css'));
         }
     }
 }
