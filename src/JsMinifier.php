@@ -47,7 +47,7 @@ class JsMinifier implements PipeInterface
         }
 
         if ($this->options['join']) {
-            $src->addDistFile($min->minify(), new DistFile(md5(uniqid(microtime())) . '.js'));
+            $src->addDistFile(new DistFile($min->minify(), md5(uniqid(microtime())) . '.js'));
         }
     }
 }
