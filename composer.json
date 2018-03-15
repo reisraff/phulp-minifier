@@ -1,7 +1,7 @@
 {
     "name": "reisraff/phulp-minifier",
     "description": "Minify your css/js",
-    "keywords": ["phulpplugin", "phulp", "php", "minifier"],
+    "keywords": ["phulpplugin", "phulp", "php", "minifier", "minifier-addon", "phulp-minifier"],
     "license": "MIT",
     "type": "library",
     "authors": [
