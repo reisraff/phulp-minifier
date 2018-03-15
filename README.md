@@ -36,9 +36,11 @@ $phulp->task('js', function ($phulp) {
 
 ### Options
 
-***Join*** : When join flag is true all distFiles will be merged in
-one and the final file name will be a md5 hash. You can set this in
-the constructor, by default the join flag is false:
+Set in the constructor.
+
+***Join*** : When join flag is true all distFiles will be merged in one.
+
+***joinName*** : Name of the joined file.
 
 ```php
 <?php
@@ -46,7 +48,17 @@ the constructor, by default the join flag is false:
 use Phulp\Minifier\CssMinifier;
 use Phulp\Minifier\JsMinifier;
 
-$cssMinifier = new CssMinifier(['join' => true]); // the join flag is true
-$jsMinifier = new JsMinifier(['join' => true]); // the join flag is true
+$cssMinifier = new CssMinifier([
+    // default: false
+    'join' => true,
+    // default: styles.min.css
+    'joinName' => 'myMinifiedCss.css'
+]);
+$jsMinifier = new JsMinifier([
+    // default: false
+    'join' => true
+    // default: script.min.js
+    'joinName' => 'myMinifiedJs.js'
+]);
 
 ```
