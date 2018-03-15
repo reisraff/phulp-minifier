@@ -18,12 +18,18 @@ use Phulp\Minifier\JsMinifier;
 
 $phulp->task('css', function ($phulp) {
     $phulp->src(['src/'], '/css$/')
-        ->pipe(new CssMinifier);
+        // minify
+        ->pipe(new CssMinifier)
+        // write minified files
+        ->pipe($phulp->dest('dist/'));
 });
 
 $phulp->task('js', function ($phulp) {
     $phulp->src(['src/'], '/js$/')
-        ->pipe(new JsMinifier);
+        // minify
+        ->pipe(new JsMinifier)
+        // write minified files
+        ->pipe($phulp->dest('dist/'));
 });
 
 ```
