@@ -2,52 +2,23 @@
 
 namespace Phulp\Minifier;
 
-use Phulp\PipeInterface;
-use Phulp\Source;
-use Phulp\DistFile;
 use MatthiasMullie\Minify\JS;
 
-class JsMinifier implements PipeInterface
+class JsMinifier extends MinifierAbstract 
 {
     /**
-     * @var array $options
+     * {@inheritdoc}
      */
-    private $options = [
+    protected $options = [
         'join' => false,
+        'joinName' => 'script.min.js'
     ];
 
     /**
-     * @param array $options
+     * {@inheritdoc}
      */
-    public function __construct(array $options = [])
+    protected function createMinifier()
     {
-        $this->options = array_merge($this->options, $options);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function execute(Source $src)
-    {
-        $min = new JS();
-        foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/js$/', $file->getName()) || preg_match('/js$/', $file->getDistpathname())) {
-                if (!$this->options['join']) {
-                    $min = new JS;
-                }
-
-                $min->add($file->getContent());
-
-                if (!$this->options['join']) {
-                    $file->setContent($min->minify());
-                } else {
-                    $src->removeDistFile($key);
-                }
-            }
-        }
-
-        if ($this->options['join']) {
-            $src->addDistFile(new DistFile($min->minify(), md5(uniqid(microtime())) . '.js'));
-        }
+        return new JS;
     }
 }

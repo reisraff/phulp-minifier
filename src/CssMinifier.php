@@ -2,52 +2,23 @@
 
 namespace Phulp\Minifier;
 
-use Phulp\PipeInterface;
-use Phulp\Source;
-use Phulp\DistFile;
 use MatthiasMullie\Minify\CSS;
 
-class CssMinifier implements PipeInterface
+class CssMinifier extends MinifierAbstract 
 {
     /**
-     * @var array $options
+     * {@inheritdoc}
      */
-    private $options = [
+    protected $options = [
         'join' => false,
+        'joinName' => 'styles.min.css'
     ];
 
     /**
-     * @param array $options
+     * {@inheritdoc}
      */
-    public function __construct(array $options = [])
+    protected function createMinifier()
     {
-        $this->options = array_merge($this->options, $options);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function execute(Source $src)
-    {
-        $min = new CSS;
-        foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/css$/', $file->getName()) || preg_match('/css$/', $file->getDistpathname())) {
-                if (!$this->options['join']) {
-                    $min = new CSS;
-                }
-
-                $min->add($file->getContent());
-
-                if (!$this->options['join']) {
-                    $file->setContent($min->minify());
-                } else {
-                    $src->removeDistFile($key);
-                }
-            }
-        }
-
-        if ($this->options['join']) {
-            $src->addDistFile(new DistFile($min->minify(), md5(uniqid(microtime())) . '.css'));
-        }
+        return new CSS;
     }
 }
